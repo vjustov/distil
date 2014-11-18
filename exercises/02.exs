@@ -29,7 +29,7 @@ byte_size("hellö")      # => 6
 String.length("hellö")  # => 5
 # wait what? yes all strings are encoded in utf8. that causes that the character "ö" takes 2 bytes to be represented.
 # lastly we have string interpolation:
-"that string's length was: #{string.length("hellö")}"
+"that string's length was: #{String.length("hellö")}"
 
 # in the previous excersice we saw the = operator and thought that it was an assignement operator;
 # actually it is not.
@@ -42,7 +42,7 @@ x = "this ain't true"
 # 13 = y
 
 # Because of that we can use this operator to match against all types of data
-{a,2,b} = {1,3,4} # This will error out because we are specifing that we want to match against a tuple that has 2 as the second element
+# {a,2,b} = {1,3,4} # This will error out because we are specifing that we want to match against a tuple that has 2 as the second element
 
 # Also variables in Elixir can be rebound:
 x = 1
