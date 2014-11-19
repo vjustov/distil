@@ -7,8 +7,14 @@
 
 # Integers
 1
-809_562_9834
-0x1F
+809_562_9834      # Underscores are used to style numbers but dont have any meaning.
+0x1F              # Hexagesimal
+0o777             # Octal
+0b1010            # Binary
+
+# Floats
+3.14
+1.0e-10           # Exponent
 
 # So strings:
 "Hi"
