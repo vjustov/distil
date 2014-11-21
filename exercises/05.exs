@@ -11,20 +11,29 @@ defmodule AssertionTest do
   # concurrently with other test cases.
   use ExUnit.Case, async: true
 
+  # A tag can be set for all tests in a module by setting @moduletag:
+  @moduletag :external
+
   setup do # Works as a before block, sort of.
     {:ok, [pid: 1]}
   end
 
   # ExUnit uses the `test` macro instead the it that we have seen on ruby.
   test "the truth" do
-    assert true
+    assert true == :true
   end
 
-  @tag cd: "fixtures"
+  @tag cd: "false"
   test "reads utf-8 fixtures" do
-    File.read("hello")
+    refute true == false
+  end
+
+  # Now its your turn, make sure these tests pass
+  test "It knows how to sum" do
+    assert 2+1 = 4
+  end
+
+  test "It knows how to make phrases" do
+    refute "Hello" <> "World" != "Hello World"
   end
 end
-
-# A tag can be set for all tests in a module by setting @moduletag:
-@moduletag :external
